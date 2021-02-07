@@ -2106,6 +2106,7 @@ my $base_name = "";
 my $release_branch = "";
 if (%parsed_version) {
   $version = $parsed_version{string};
+  print("This version is $version\n");
   $base_name = "${base_name_prefix}${version}";
   if (!$micro) {
     $release_branch =
@@ -2120,8 +2121,8 @@ if (%parsed_version) {
       "version looks like a major or minor release, but --micro was passed!\n";
   }
   if (!$next_version) {
-    my $next_minor = int($parsed_version{minor}) + $micro ? 0 : 1;
-    my $next_micro = $micro ? (int($parsed_version{minor}) + 1) : 0;
+    my $next_minor = int($parsed_version{minor}) + ($micro ? 0 : 1);
+    my $next_micro = $micro ? (int($parsed_version{micro}) + 1) : 0;
     $next_version = sprintf("%s.%d.%d", $parsed_version{major}, $next_minor, $next_micro);
   }
   $next_version .= "-${metadata}";
@@ -2130,6 +2131,7 @@ if (%parsed_version) {
     die "Invalid next version: $next_version\nStopped";
   }
   $next_version = $parsed_next_version{string_with_metadata};
+  print("Next version is $next_version\n");
 }
 elsif (!$print_help) {
   die "Invalid version: $version\nStopped";
@@ -2522,8 +2524,7 @@ sub run_step {
 
   return if (
     !$settings->{list_all} && ($step->{skip} || $step->{verified} ||
-    ($settings->{release_flag_file_exists} && !$step->{post_release}) ||
-    ($settings->{micro} && $step->{post_release})));
+    ($settings->{release_flag_file_exists} && !$step->{post_release})));
   print "$step_count: $title\n";
   return if $settings->{list};
 
