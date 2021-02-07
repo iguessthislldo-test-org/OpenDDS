@@ -556,7 +556,7 @@ sub remedy_git_status_clean {
   my $post_release = shift() || 0;
   my $version = $settings->{version};
 
-  if (!run_command("git diff")) {
+  if (!run_command("git --no-pager diff HEAD")) {
     return 0;
   }
   print "Would you like to add and commit these changes [y/n]? ";
@@ -2120,8 +2120,9 @@ if (%parsed_version) {
       "version looks like a major or minor release, but --micro was passed!\n";
   }
   if (!$next_version) {
-    $next_version = sprintf("%s.%d",
-      $parsed_version{major}, int($parsed_version{minor}) + 1);
+    my $next_minor = int($parsed_version{minor}) + $micro ? 0 : 1;
+    my $next_micro = $micro ? (int($parsed_version{minor}) + 1) : 0;
+    $next_version = sprintf("%s.%d.%d", $parsed_version{major}, $next_minor, $next_micro);
   }
   $next_version .= "-${metadata}";
   %parsed_next_version = parse_version($next_version);
@@ -2468,7 +2469,8 @@ my @release_steps  = (
     name    => 'Email DDS-Release-Announce list',
     verify  => sub{verify_email_list(@_)},
     message => sub{message_email_dds_release_announce(@_)},
-    remedy  => sub{remedy_email_dds_release_announce(@_)}
+    remedy  => sub{remedy_email_dds_release_announce(@_)},
+    post_release => 1,
   },
 );
 

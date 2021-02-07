@@ -1,4 +1,4 @@
-This is OpenDDS version 3.17-dev (NOT A RELEASE)
+This is OpenDDS version 3.17.1, released Feb 7 2021
 
 This software is open source and free of licensing fees.  See the
 LICENSE file (in this directory) for license details.

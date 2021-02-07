@@ -1,16 +1,28 @@
 # OpenDDS Releases
 
-## Version 3.17 of OpenDDS
-OpenDDS 3.17 is currently in development, so this list might change.
+## Version 3.17.1 of OpenDDS
+OpenDDS 3.17.1 was released on Feb 7 2021.
 
 ### Additions:
-- TODO: Add your features here
+-a
 
 ### Fixes:
-- TODO: Add your fixes here
+- a
 
 ### Notes:
-- TODO: Add your notes here
+- a
+
+## Version 3.17 of OpenDDS
+OpenDDS 3.17 was released on Feb 7 2021.
+
+### Additions:
+- a
+
+### Fixes:
+- a
+
+### Notes:
+- a
 
 ## Version 3.16 of OpenDDS
 OpenDDS 3.16 was released on Jan 27 2021.

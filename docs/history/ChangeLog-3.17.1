@@ -1,0 +1,1346 @@
+Fri Feb 05 14:58:04 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit 36ca8f008ecc780824de07782688974474fd64e9
+
+          Merge pull request #2394 from jwillemsen/patch-7
+
+          Use https links
+
+Fri Feb 05 14:57:36 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit d154cd0d3ea7ec840d5cc9dfc9a1f4c73334a54c
+
+          Merge pull request #2393 from
+          iguessthislldo/igtd/messenger-cleanup
+
+          Cleanup tests/DCPS/Messenger
+
+Fri Feb 05 14:57:27 UTC 2021  Johnny Willemsen  <jwillemsen@remedy.nl>
+        commit be502975f211fee4a34f9221f17889f2d8b48de8
+
+        * README.md:
+
+          Use https links
+
+Fri Feb 05 14:57:26 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit 6d793c8338b00bef3236cbfc7fef177c1683341b
+
+          Merge pull request #2392 from iguessthislldo/igtd/reader-delete
+
+          Tweak delete_datareader Precondition Warning
+
+Fri Feb 05 14:57:17 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit d9f15082d40f1d2cd11b34b41a4acceb52d1b1ad
+
+          Merge pull request #2391 from
+          jrw972/rtps-discovery-heartbeat-period
+
+          Heartbeat period not available for configuration in RTPS
+          Discovery
+
+Fri Feb 05 02:48:27 UTC 2021  Fred Hornsey  <hornseyf@objectcomputing.com>
+        commit 3b091dc5f41c866b0cfb0aa87a234ca5dde18145
+
+        * dds/DCPS/SubscriberImpl.cpp:
+        * dds/DCPS/SubscriberImpl.h:
+
+          Respond to Review
+
+          https://github.com/objectcomputing/OpenDDS/pull/2392#discussion_r570625937
+
+Fri Feb 05 02:36:57 UTC 2021  Fred Hornsey  <hornseyf@objectcomputing.com>
+        commit d99081e8a68e4c96772572608618e7c5eac65b09
+
+        * tests/DCPS/Messenger/DataReaderListener.cpp:
+
+          More Clean Up tests/DCPS/Messenger
+
+Thu Feb 04 23:30:41 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit 7dd610b813cd3a7fa4c641b778c61377ff38d630
+
+        * tests/DCPS/MultiTopic/cpp11/MultiTopicTest_Cpp11.mpc:
+
+          Added msvc_bigobj to a MultiTopic test project
+
+Thu Feb 04 21:42:51 UTC 2021  Fred Hornsey  <hornseyf@objectcomputing.com>
+        commit fa515ceb4a711a5f89ddc58bf6e76be88b73915d
+
+        * tests/DCPS/Messenger/Args.h:
+        * tests/DCPS/Messenger/DataReaderListener.cpp:
+        * tests/DCPS/Messenger/DataReaderListener.h:
+        * tests/DCPS/Messenger/Messenger.idl:
+        * tests/DCPS/Messenger/Messenger.mpc:
+        * tests/DCPS/Messenger/Writer.cpp:
+        * tests/DCPS/Messenger/Writer.h:
+        * tests/DCPS/Messenger/publisher.cpp:
+        * tests/DCPS/Messenger/run_test.pl:
+        * tests/DCPS/Messenger/stack_subscriber.cpp:
+        * tests/DCPS/Messenger/subscriber.cpp:
+
+          Cleanup tests/DCPS/Messenger
+
+          Since this test always seems to get copied to make new tests,
+          lets
+          reduce the number of bad habits and anachronisms that will get
+          copied in
+          the future.
+
+          - Make includes match guidelines and added missing includes.
+          - Replaced var `is_nil` checks with straight checks.
+          - Replaced `OPENDDS_STRING` with `OpenDDS::DCPS::String`.
+          - Fixed style of function signatures.
+          - Removed blank lines of copyright notices. I still don't know
+          the
+          reason for these.
+          - Other misc. fixes
+
+Thu Feb 04 21:22:01 UTC 2021  Fred Hornsey  <hornseyf@objectcomputing.com>
+        commit 258a113fc62b710a39baef499259d5276ed141e9
+
+        * dds/DCPS/SubscriberImpl.cpp:
+
+          Tweak delete_datareader Precondition Error
+
+          Mainly to say the topic name in case the reader is builtin,
+          because it
+          would have an unknown guid.
+
+Thu Feb 04 18:15:48 UTC 2021  Justin R. Wilson  <wilsonj@objectcomputing.com>
+        commit 37199ce4c44dcbbee763f92f0ba46a6b94a45fe7
+
+        * dds/DCPS/RTPS/RtpsDiscovery.cpp:
+
+          Heartbeat period not available for configuration in RTPS
+          Discovery
+
+          Problem
+          -------
+
+          The heartbeat period for SEDP cannot be set through a
+          configuration
+          file.  See #2380.
+
+          Solution
+          --------
+
+          Add `SedpHeartbeatPeriod` configuration parameter.
+
+Thu Feb 04 14:03:13 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit 1b82b4079c91b6ca91900726c178dd113f790ac3
+
+          Merge pull request #2388 from jonesc-oci/part_loc_test_ipv6
+
+          Participant Location Test IPV6 changes.
+
+Thu Feb 04 14:02:57 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit 39ba6bb2833e7b16eafa71ad043ef2c5ff9ebbd6
+
+          Merge pull request #2383 from mitza-oci/nojson
+
+          JSON updates from #2312
+
+Thu Feb 04 14:02:45 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit 9f1211eb6a1723dcac17e7269d9873123c961a40
+
+          Merge pull request #2370 from
+          ClaytonCalabrese/tryconstruct_idlreduction
+
+          idl reduction/splitting of TryConstruct and XCDR
+
+Thu Feb 04 03:46:28 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit eaa45134aa78df8f51c6b3c6fda08410aefadd97
+
+          Merge branch 'configure' into nojson
+
+Thu Feb 04 03:45:48 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit 4a6c82695cd971c92e90fa4f25b082e873d998c9
+
+        * tests/DCPS/Observer/TestObserver.cpp:
+        * tools/rtpsrelay/DomainStatisticsReporter.h:
+        * tools/rtpsrelay/HandlerStatisticsReporter.h:
+        * tools/rtpsrelay/ParticipantStatisticsReporter.h:
+        * tools/rtpsrelay/RelayStatisticsReporter.h:
+
+          fixed build without rapidjson
+
+Wed Feb 03 22:21:58 UTC 2021  Clayton Calabrese  <calabreseclayton@gmail.com>
+        commit 3a40cc7e52870013ee67e3bc9adfc6a01bf62a70
+
+        * tests/DCPS/Compiler/xcdr/mutable_types.idl:
+
+          put the proper includes for seqs
+
+Wed Feb 03 21:29:19 UTC 2021  Chip Jones  <jonesc@objectcomputing.com>
+        commit ee7ad334d25e54df4733cd23577d48aad2129e19
+
+        * tests/DCPS/ParticipantLocationTopic/ParticipantLocationTest.cpp:
+
+          Catch transport exception.
+
+          Catch transport exception so that Perl test framework is aware
+          of the test failure.
+
+Wed Feb 03 18:23:24 UTC 2021  Chip Jones  <jonesc@objectcomputing.com>
+        commit 92eb665d8d71a5e307861d7f3c843509fc06b368
+
+        * tests/DCPS/ParticipantLocationTopic/relay_ipv6.ini:
+        * tests/DCPS/ParticipantLocationTopic/rtps_ipv6.ini:
+        * tests/DCPS/ParticipantLocationTopic/rtps_no_ice.ini:
+        * tests/DCPS/ParticipantLocationTopic/rtps_no_ice_ipv6.ini:
+
+          Update rtps.ini files for ipv6 and no_ice configurations.
+
+Wed Feb 03 20:04:03 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit 04879d8812ca37e5d07dc6057904e51a586091ee
+
+        * tests/DCPS/common/ConnectionRecordLogger.cpp:
+
+          Fix reference count leak in ConnectionRecordLogger for tests
+
+Wed Feb 03 16:58:47 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit 6b4e2f770ef724d33da025d7c0e4eda74b1a56cc
+
+        * tests/DCPS/UnitTests/JsonValueWriter.cpp:
+
+          fixed warnings in JsonValueWriter unit test
+
+Wed Feb 03 16:44:17 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit bad30fec2023258b70ba0ef0fef4cdc0d72df08b
+
+        * azure-pipelines.yml:
+
+          azure-pipelines: test --no-rapidjson
+
+Wed Feb 03 16:40:27 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit 933bac903f08d386f9d29af8f7cae1f63bf7046d
+
+        * tests/DCPS/common/ConnectionRecordLogger.cpp:
+
+          ConnectionRecordLogger for tests: conditional compile with
+          OPENDDS_RAPIDJSON
+
+Wed Feb 03 16:39:50 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit c0d1bfb9ffb44ef004a4dc79597231e453d1422a
+
+        * dds/DCPS/JsonValueWriter.h:
+
+          JsonValueWriter: fixed memory leak
+
+Wed Feb 03 15:59:33 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit 0776ea3bdba3f46606b11fcaa7d2f20eabfb2daf
+
+        * configure:
+        * tools/scripts/show_build_config.pl:
+
+          configure and show_build_config updates
+
+          - fixed a bug in checking for safety profile (from #2312)
+          - corrected library paths for vcpkg-installed Qt5
+          - cleaned up output from show_build_config
+
+Wed Feb 03 14:05:23 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit e1a955c54a28b60c04aad44780709e4cd370f78c
+
+          Merge pull request #2382 from jonesc-oci/domain_range_msg_changes
+
+          Update DomainRange and transport_template messages for
+          consistency.
+
+Wed Feb 03 14:05:05 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit 7174a8e782d36049e0bdc4311ab49d9aff0914ec
+
+          Merge pull request #2312 from jrw972/value-reader
+
+          Converting IDL data types to/from JSON requires special codegen
+
+Wed Feb 03 00:17:00 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit bd76a4c52101ffe9babee99dd35b7c4dbeac1f8e
+
+          Merge pull request #2307 from
+          pollocktoci/add_bench2_report_parser
+
+          Initial checkin of bench2 report_parser application code.
+
+Wed Feb 03 00:15:24 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit 78abf10ecd6f5c7c6ca0cb34631f2e334c429a43
+
+        * tests/DCPS/KeyTest/IsBounded.cpp:
+
+          more safety profile
+
+Wed Feb 03 00:06:44 UTC 2021  Tim Pollock  <pollockt@objectcomputing.com>
+        commit 9c67fdaece2b598aae5e81d373ead397a9ee0d56
+
+        * performance-tests/bench/report_parser/.gitignore:
+
+          Added .gitignore file.
+
+Tue Feb 02 23:30:40 UTC 2021  Chip Jones  <jonesc@objectcomputing.com>
+        commit 572a3e473306f2245787ea02fea12edbd248d935
+
+        * dds/DCPS/Service_Participant.cpp:
+        * dds/DCPS/transport/framework/TransportRegistry.cpp:
+
+          Update DomainRange and transport_template messages for
+          consistency.
+
+Tue Feb 02 23:36:55 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit d044c28670be9fcedf187c59064ff1a98098d181
+
+          Merge pull request #2380 from
+          jrw972/rtps-discovery-heartbeat-period
+
+          RtpsDiscovery does not expose heartbeat period
+
+Tue Feb 02 23:15:41 UTC 2021  Clayton Calabrese  <calabreseclayton@gmail.com>
+        commit 9c96380aeb7418bdfa529f0d92b6f86b49c16db0
+
+        * tests/DCPS/Compiler/xcdr/mutable_types.idl:
+
+          fix for windows idl compilation
+
+Tue Feb 02 22:14:33 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit 762d6fb17a50af0c61bc949645b36a6075faea50
+
+        * tests/cmake_integration/run_ci_tests.pl:
+
+          CMake CI tests: try cleaning after each step to avoid running out
+          of space
+
+Tue Feb 02 22:12:11 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit dd067d63e013f91157b3a4a8a8d65ee6ac7832c1
+
+        * configure:
+        * dds/DCPS/ValueReader.h:
+        * dds/idl/value_reader_generator.cpp:
+        * tests/DCPS/KeyTest/BoundTest.idl:
+        * tests/DCPS/KeyTest/KeyMarshalling.cpp:
+        * tests/DCPS/KeyTest/KeyTest.idl:
+
+          updates for Safety Profile
+
+Tue Feb 02 17:48:43 UTC 2021  Justin R. Wilson  <wilsonj@objectcomputing.com>
+        commit 86e7a78f96b765a0a49b7faccd9c915caad9e8ff
+
+        * dds/DCPS/RTPS/RtpsDiscovery.cpp:
+        * dds/DCPS/RTPS/RtpsDiscovery.h:
+        * dds/DCPS/RTPS/Sedp.cpp:
+
+          RtpsDiscovery does not expose heartbeat period
+
+          Problem
+          -------
+
+          RtpsDiscovery can be delayed by dropped messages. By default,
+          these
+          messages will only be retried after the default heartbeat period
+          of 1
+          second.
+
+          Solution
+          --------
+
+          Expose the heartbeat period.
+
+Tue Feb 02 17:03:14 UTC 2021  Clayton Calabrese  <calabreseclayton@gmail.com>
+        commit 0c3b441744b6bca35804c3f73b6fa1f1548c9bf1
+
+        * tests/DCPS/Compiler/TryConstruct/AnonTypes.idl:
+        * tests/DCPS/Compiler/TryConstruct/TryConstruct.idl:
+        * tests/DCPS/Compiler/TryConstruct/TryConstructBaseTypes.idl:
+
+          grammar fixes from pr
+
+Tue Feb 02 15:11:11 UTC 2021  Tim Pollock  <tpollock@gmail.com>
+        commit 19f2f60c254b3bff238e940b8ece4c7be84d59ba
+
+        * performance-tests/bench/report_parser/ArgumentParser.cpp:
+        * performance-tests/bench/report_parser/main.cpp:
+
+          Minor formatting changes.
+
+Tue Feb 02 14:21:14 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit 8bc9c8937448662d78cdaae9d4a1744e0fedbdbf
+
+          Merge pull request #2355 from kuznetsovmoci/XTypes_test_secure
+
+          Added security option for XTypes end-to-end tests
+
+Tue Feb 02 12:45:51 UTC 2021  Tim Pollock  <tpollock@gmail.com>
+        commit add7ceea71e45e02278c8023a0224a623d6900be
+
+          Merge branch 'master' into add_bench2_report_parser
+
+Tue Feb 02 03:36:21 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit 9c827917bd97c676088facee8c5b177c29c8cce4
+
+          Merge pull request #2376 from jonesc-oci/partLocTopicChg2
+
+          Reactivate ParticipantLocationTopic C++ test.
+
+Tue Feb 02 03:36:06 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit 0411476acdb3b0fe2602eacee2185f2177927b92
+
+          Merge pull request #2375 from
+          objectcomputing/dependabot/github_actions/simpsont-oci/action-junit-report-v2.1.1
+
+          Bump simpsont-oci/action-junit-report from v1.2.1 to v2.1.1
+
+Tue Feb 02 03:35:49 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit 05281dad5656fc1c2bbfb85ca5fcfea49b19f0cb
+
+          Merge pull request #2367 from
+          pollocktoci/bench_node_controller_output_changes
+
+          Added node name to bench test_controller output.
+
+Mon Feb 01 23:04:17 UTC 2021  Clayton Calabrese  <calabreseclayton@gmail.com>
+        commit 43d4eeafdd1a1f3c1cf7750225e4b2d18b823fd8
+
+        * tests/DCPS/Compiler/xcdr/.gitignore:
+        * tests/DCPS/Compiler/xcdr/mutabletypes.idl  tests/DCPS/Compiler/xcdr/mutable_types.idl:
+        * tests/DCPS/Compiler/xcdr/xcdr.cpp:
+        * tests/DCPS/Compiler/xcdr/xcdr.mpc:
+
+          rename mutable_types.idl
+
+Mon Feb 01 22:04:05 UTC 2021  Mike Kuznetsov  <kuznetsovm@objectcomputing.com>
+        commit 429b79288c25c29b61ed1237526c5886c28a03d6
+
+        * tests/DCPS/XTypes/run_test.pl:
+
+          Layout fixes
+
+Mon Feb 01 20:48:51 UTC 2021  Mike Kuznetsov  <kuznetsovm@objectcomputing.com>
+        commit a4d4b52ca9638db39f3a94c3cb9ac233fbd54e98
+
+        * tests/DCPS/XTypes/Pub/XTypesPublisher.cpp:
+        * tests/DCPS/XTypes/Sub/XTypesSubscriber.cpp:
+        * tests/DCPS/XTypes/XTypes.h:
+        * tests/DCPS/XTypes/run_test.pl:
+        * tests/security/security_tests.lst:
+
+          Fixes as per PR 2355 review
+
+Mon Feb 01 19:24:12 UTC 2021  Mike Kuznetsov  <kuznetsovm@objectcomputing.com>
+        commit 7ca8efbd436c4c243488e044333fe8b89bd13d1a
+
+        * tests/DCPS/XTypes/Pub/XTypesPublisher.cpp:
+        * tests/DCPS/XTypes/Sub/XTypesSubscriber.cpp:
+        * tests/DCPS/XTypes/XTypes.h:
+
+          Fixes as per PR 2355 review
+
+Mon Feb 01 19:23:10 UTC 2021  Tim Pollock  <pollockt@objectcomputing.com>
+        commit 4a3573664d78adc1d5951704f98f8532ad79b4bb
+
+        * performance-tests/bench/node_controller/main.cpp:
+
+          Changed added arguments to be references.
+
+Mon Feb 01 19:18:36 UTC 2021  Mike Kuznetsov  <kuznetsovm@objectcomputing.com>
+        commit e34af6e1d12dad06b2df6d7b9dcc4d67d4668ed8
+
+        * tests/DCPS/XTypes/Pub/XTypesPublisher.cpp:
+        * tests/DCPS/XTypes/Sub/XTypesSubscriber.cpp:
+        * tests/DCPS/XTypes/run_test.pl:
+
+          Fixes as per PR 2355 review
+
+Mon Feb 01 18:58:28 UTC 2021  Chip Jones  <jonesc@objectcomputing.com>
+        commit 135e61524ab2b3e3f9ac2ca175abab51a9ad8d1c
+
+        * tests/security/security_tests.lst:
+
+          Reactivate ParticipantLocationTopic C++ test.
+
+Mon Feb 01 18:51:55 UTC 2021  Tim Pollock  <pollockt@objectcomputing.com>
+        commit 643f852a10c2ffef399b39de5c63959ebfbfe9a7
+
+          Merge branch 'master' into bench_node_controller_output_changes
+
+Mon Feb 01 18:41:34 UTC 2021  Clayton Calabrese  <calabreseclayton@gmail.com>
+        commit cc37e8be5dd9cee06a160c435967bfe2a8248194
+
+        * tests/DCPS/Compiler/TryConstruct/.gitignore:
+        * tests/DCPS/Compiler/TryConstruct/AnonTypes.idl:
+        * tests/DCPS/Compiler/TryConstruct/C++11/TryConstruct.cpp:
+        * tests/DCPS/Compiler/TryConstruct/C++11/TryConstruct_C++11.mpc:
+        * tests/DCPS/Compiler/TryConstruct/Compiler.mpc:
+        * tests/DCPS/Compiler/TryConstruct/TryConstruct3.idl  tests/DCPS/Compiler/TryConstruct/NestedTrimStruct.idl:
+        * tests/DCPS/Compiler/TryConstruct/TryConstruct.cpp:
+        * tests/DCPS/Compiler/TryConstruct/TryConstruct.idl:
+        * tests/DCPS/Compiler/TryConstruct/TryConstruct2.idl:
+        * tests/DCPS/Compiler/TryConstruct/TryConstructBaseTypes.idl:
+        * tests/DCPS/Compiler/xcdr/.gitignore:
+        * tests/DCPS/Compiler/xcdr/xcdr2.idl  tests/DCPS/Compiler/xcdr/mutabletypes.idl:
+        * tests/DCPS/Compiler/xcdr/xcdr.cpp:
+        * tests/DCPS/Compiler/xcdr/xcdr.mpc:
+
+          pr changes
+
+Mon Feb 01 18:24:51 UTC 2021  Justin R. Wilson  <wilsonj@objectcomputing.com>
+        commit 08b177004ff62acf2fd1b372e5c2b4ce60033fe9
+
+        * dds/idl/typeobject_generator.cpp:
+
+          Ignore interfaces
+
+Mon Feb 01 18:10:17 UTC 2021  Tim Pollock  <pollockt@objectcomputing.com>
+        commit c5633df63cc10403936e77c6fd2c127b6ddd6ca9
+
+        * performance-tests/bench/report_parser/ArgumentParser.cpp:
+
+          Fixed issue with help argument
+
+Mon Feb 01 12:59:06 UTC 2021  Tim Pollock  <pollockt@objectcomputing.com>
+        commit e3abb173fa79961f1b366350c6194708c46b9b78
+
+          Merge branch 'master' into add_bench2_report_parser
+
+Mon Feb 01 07:07:37 UTC 2021  dependabot[bot]  <49699333+dependabot[bot]@users.noreply.github.com>
+        commit c091edf61dfa20fb05bc97cb6af29427af24f228
+
+        * .github/workflows/check_test_results.yml:
+
+          Bump simpsont-oci/action-junit-report from v1.2.1 to v2.1.1
+
+          Bumps
+          [simpsont-oci/action-junit-report](https://github.com/simpsont-oci/action-junit-report)
+          from v1.2.1 to v2.1.1.
+          - [Release
+          notes](https://github.com/simpsont-oci/action-junit-report/releases)
+          -
+          [Commits](https://github.com/simpsont-oci/action-junit-report/compare/v1.2.1...fc61a0a582f824804643fe0a55f6b4b06bc8e3ae)
+
+          Signed-off-by: dependabot[bot] <support@github.com>
+
+Mon Feb 01 03:17:19 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit e9360d8df6ce7ddb2289171359dbf1556d89ccd0
+
+          Merge pull request #2372 from mitza-oci/gitignore
+
+          Gitignore: updated Azure Pipelines to tell us when an ignore is
+          missing
+
+Fri Jan 29 23:32:39 UTC 2021  Clayton Calabrese  <calabreseclayton@gmail.com>
+        commit 71ad1005c5d070a682a4dc61e127f364d2e80232
+
+        * tests/DCPS/Compiler/TryConstruct/.gitignore:
+        * tests/DCPS/Compiler/TryConstruct/C++11/TryConstruct.cpp:
+        * tests/DCPS/Compiler/TryConstruct/C++11/TryConstruct_C++11.mpc:
+        * tests/DCPS/Compiler/TryConstruct/Compiler.mpc:
+        * tests/DCPS/Compiler/TryConstruct/TryConstruct.cpp:
+        * tests/DCPS/Compiler/TryConstruct/TryConstruct.idl:
+        * tests/DCPS/Compiler/TryConstruct/TryConstruct2.idl:
+        * tests/DCPS/Compiler/TryConstruct/TryConstruct3.idl:
+        * tests/DCPS/Compiler/TryConstruct/TryConstructBaseTypes.idl:
+        * tests/DCPS/Compiler/xcdr/xcdr2.idl:
+
+          refactor of trycon idl split to use an include to not repeat idl.
+
+Fri Jan 29 22:24:19 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit 2c4faa47c20d208ec9f091d1146ab9700cf6bf7b
+
+        * tests/DCPS/Compiler/idl_test1_lib/.gitignore:
+        * tests/DCPS/ContainsEntity/.gitignore:
+        * tests/DCPS/XTypes/Pub/.gitignore:
+        * tests/DCPS/XTypes/Sub/.gitignore:
+
+          Fixed gitignores
+
+Fri Jan 29 21:25:08 UTC 2021  Clayton Calabrese  <calabreseclayton@gmail.com>
+        commit 328a8d54a98b9af768c1e4adab02e2b3de127d75
+
+        * tests/DCPS/Compiler/xcdr/.gitignore:
+        * tests/DCPS/Compiler/xcdr/xcdr.cpp:
+        * tests/DCPS/Compiler/xcdr/xcdr.idl:
+        * tests/DCPS/Compiler/xcdr/xcdr.mpc:
+        * tests/DCPS/Compiler/xcdr/xcdr2.idl:
+
+          splitting of xcdr test idl to prevent memory errors
+
+Fri Jan 29 21:08:57 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit b0257bca8dc32381995f7d0699eff1be0ccc3f2f
+
+          Merge pull request #2327 from jonesc-oci/p-loc-test
+
+          ParticipantLocationTopic test changes: Convert to single process
+          test with security.
+
+Fri Jan 29 21:08:12 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit 0ed8d8f775af33b90367b1fef41b776b952284ee
+
+        * azure-pipelines.yml:
+
+          another attempt at azure-pipelines.yml gitignore fix
+
+Fri Jan 29 21:05:32 UTC 2021  Mike Kuznetsov  <kuznetsovm@objectcomputing.com>
+        commit 598ac761ac5e039dbefc0d0a0109967ebcdde72b
+
+        * tests/DCPS/XTypes/run_test.pl:
+
+          layout fixes
+
+Fri Jan 29 21:02:54 UTC 2021  Mike Kuznetsov  <kuznetsovm@objectcomputing.com>
+        commit 3e9833deabb299e9ca307d3572bfdafd6359cda5
+
+        * tests/DCPS/XTypes/Pub/XTypesPublisher.cpp:
+        * tests/DCPS/XTypes/Sub/XTypesSubscriber.cpp:
+        * tests/DCPS/XTypes/XTypes.h:
+        * tests/DCPS/XTypes/run_test.pl:
+
+          Fixes as per PR 2355 review
+
+Fri Jan 29 20:56:15 UTC 2021  Clayton Calabrese  <calabreseclayton@gmail.com>
+        commit e803399f3e7396bdd06f8257258a7b36bd6d7b8c
+
+        * tests/DCPS/Compiler/TryConstruct/.gitignore:
+        * tests/DCPS/Compiler/TryConstruct/TryConstruct.idl:
+        * tests/DCPS/Compiler/TryConstruct/TryConstruct2.idl:
+        * tests/DCPS/Compiler/TryConstruct/TryConstruct3.idl:
+
+          end of file newlines and spacing fixes
+
+Fri Jan 29 20:49:50 UTC 2021  Clayton Calabrese  <calabreseclayton@gmail.com>
+        commit 8d4c57268837cf24c482852942c2f1d6363b0a2c
+
+        * tests/DCPS/Compiler/TryConstruct/.gitignore:
+        * tests/DCPS/Compiler/TryConstruct/C++11/TryConstruct.cpp:
+        * tests/DCPS/Compiler/TryConstruct/C++11/TryConstruct_C++11.mpc:
+        * tests/DCPS/Compiler/TryConstruct/Compiler.mpc:
+        * tests/DCPS/Compiler/TryConstruct/TryConstruct.cpp:
+        * tests/DCPS/Compiler/TryConstruct/TryConstruct.idl:
+        * tests/DCPS/Compiler/TryConstruct/TryConstruct2.idl:
+        * tests/DCPS/Compiler/TryConstruct/TryConstruct3.idl:
+
+          idl reduction/splitting of TryConstruct due to issue #2368
+
+Fri Jan 29 18:50:33 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit fc55c002e3f35c03c9105927cb7e2bc0e5411ebf
+
+        * azure-pipelines.yml:
+
+          another attempt at azure-pipelines.yml gitignore fix
+
+Fri Jan 29 18:46:54 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit 093a4c68bcaffed7f79b8a3386b1139c6ffcb903
+
+        * azure-pipelines.yml:
+
+          another attempt at azure-pipelines.yml gitignore fix
+
+Fri Jan 29 16:57:26 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit 8f00a4c780ff2e0a577a7caa5ed2eedc514b62ce
+
+        * azure-pipelines.yml:
+
+          Azure pipelines: trying a change to the gitignore step
+
+Fri Jan 29 16:54:39 UTC 2021  Mike Kuznetsov  <kuznetsovm@objectcomputing.com>
+        commit ae13bcc6b50b2b992cce5315433b6a67992eddee
+
+        * tests/DCPS/XTypes/run_test.pl:
+
+          Added test for appendable structure with enabled security
+
+Fri Jan 29 16:45:00 UTC 2021  Mike Kuznetsov  <kuznetsovm@objectcomputing.com>
+        commit 9acd1a28d070c1faeba884f2427aeda71f5e1e84
+
+        * dds/DCPS/RTPS/Sedp.cpp:
+
+          Type Lookup Service bug fix
+
+Fri Jan 29 15:59:26 UTC 2021  Mike Kuznetsov  <kuznetsovm@objectcomputing.com>
+        commit bb889d4e3b8df4624e26bf652d961c0faada4147
+
+        * dds/DCPS/RTPS/Sedp.cpp:
+
+          Type Lookup Service bug fixes
+
+Fri Jan 29 14:12:50 UTC 2021  Tim Pollock  <pollockt@objectcomputing.com>
+        commit 512dee6f1506f915f4c3dbf9c8f06102adce8ce9
+
+        * performance-tests/bench/idl/Bench.idl:
+        * performance-tests/bench/node_controller/main.cpp:
+        * performance-tests/bench/test_controller/ScenarioManager.cpp:
+
+          Added node name to bench test_controller output.
+
+Fri Jan 29 04:00:07 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit 952bc530d3b65f6b15ccd921f7a905e747a4da05
+
+          Merge pull request #2362 from
+          ClaytonCalabrese/tls_thrasher_oldcpp
+
+          get_minimal_type_map_private call not thread safe for cpp03
+
+Fri Jan 29 03:59:50 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit f5541ce1b1008f6d933581a797cd91292287a33a
+
+          Merge pull request #2363 from
+          objectcomputing/gh_wf_fix_vcpkg_cache
+
+          Tweak Github Actions vcpkg usage to avoid cache & tar warnings
+
+Thu Jan 28 22:42:28 UTC 2021  Mike Kuznetsov  <kuznetsovm@objectcomputing.com>
+        commit 29db4d5a22110d3befd20bb8f4893840a60c742c
+
+          Merge branch 'master' of
+          https://github.com/objectcomputing/OpenDDS into
+          XTypes_test_secure
+
+Thu Jan 28 22:32:49 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit f994236559cb93a05f25690d14ef6048067e5882
+
+          Merge pull request #2358 from
+          iguessthislldo/igtd/write-data-container-wait-pending
+
+          Fix Loop in WriteDataContainer::wait_pending
+
+Thu Jan 28 20:17:14 UTC 2021  Timothy Simpson  <simpsont@objectcomputing.com>
+        commit ef4e00826f06d349759d6c82463d05aca9df9570
+
+        * .github/workflows/build_and_test.yml:
+
+          fixing commented jobs just in case
+
+Thu Jan 28 20:14:06 UTC 2021  Clayton Calabrese  <calabreseclayton@gmail.com>
+        commit 8267e3eb814a626bc6ee17c7ace1d5b22b3983dc
+
+        * dds/DCPS/Service_Participant.cpp:
+        * dds/DCPS/Service_Participant.h:
+        * dds/idl/marshal_generator.cpp:
+        * dds/idl/typeobject_generator.cpp:
+
+          PR fixes and silencing of a warning
+
+Thu Jan 28 19:46:20 UTC 2021  Tim Pollock  <pollockt@objectcomputing.com>
+        commit d594e6167f2d0da023e2f1b66b5e7599987e7d7b
+
+        * performance-tests/bench/report_parser/ArgumentParser.cpp:
+        * performance-tests/bench/report_parser/ArgumentParser.h:
+        * performance-tests/bench/report_parser/TimeSeriesGnuPlotFormatter.cpp:
+        * performance-tests/bench/report_parser/TimeSeriesRawFormatter.cpp:
+
+          Minor code formatting changes.
+
+Thu Jan 28 19:23:38 UTC 2021  Mike Kuznetsov  <kuznetsovm@objectcomputing.com>
+        commit 911acbeca0296031dfa0d04c06d15982b589e63d
+
+        * tests/DCPS/XTypes/Pub/XTypesPublisher.cpp:
+        * tests/DCPS/XTypes/Sub/XTypesSubscriber.cpp:
+        * tests/DCPS/XTypes/XTypes.h:
+        * tests/DCPS/XTypes/run_test.pl:
+
+          Fixes as per PR 2355 review
+
+Thu Jan 28 19:21:10 UTC 2021  Clayton Calabrese  <calabreseclayton@gmail.com>
+        commit 248e6bd72d3a4f78a85569c9ed8b484e24203eda
+
+        * dds/DCPS/Service_Participant.h:
+
+          updated comment
+
+Thu Jan 28 19:19:59 UTC 2021  Clayton Calabrese  <calabreseclayton@gmail.com>
+        commit d973ac3ecfa0fdc2364e04059c36a10fa01ef31b
+
+        * dds/DCPS/Service_Participant.cpp:
+        * dds/DCPS/Service_Participant.h:
+        * dds/idl/typeobject_generator.cpp:
+
+          move actual lock to private, rename to fit typemap rather than
+          type information
+
+Thu Jan 28 19:10:22 UTC 2021  Clayton Calabrese  <calabreseclayton@gmail.com>
+        commit 97be822561c4d6492603373c3aa5cc0eaf7ea3df
+
+        * dds/DCPS/Service_Participant.cpp:
+        * dds/DCPS/Service_Participant.h:
+        * dds/idl/typeobject_generator.cpp:
+
+          made thread safe for old c++ implementations
+
+Thu Jan 28 19:00:03 UTC 2021  Justin R. Wilson  <wilsonj@objectcomputing.com>
+        commit 5b9e47506ec808a66af40a9865a6a35a7bf30326
+
+        * dds/idl/dds_visitor.cpp:
+        * dds/idl/typeobject_generator.cpp:
+        * dds/idl/typeobject_generator.h:
+        * tests/DCPS/UnitTests/JsonValueReader.cpp:
+
+          Fix builds
+
+Thu Jan 28 16:42:33 UTC 2021  Mike Kuznetsov  <kuznetsovm@objectcomputing.com>
+        commit 517ce6422638c55fc9e684b528013bbf07ddeb6b
+
+        * tests/DCPS/XTypes/XTypes.h:
+
+          Minor fix
+
+Thu Jan 28 15:13:52 UTC 2021  Fred Hornsey  <hornseyf@objectcomputing.com>
+        commit 2ac1aaa7cdacc2d5bf91dc39550c2058120965e7
+
+        * dds/DCPS/MessageTracker.cpp:
+        * dds/DCPS/WriteDataContainer.cpp:
+
+          Break Out of Pending Message Loops on Error
+
+Thu Jan 28 14:54:53 UTC 2021  Timothy Simpson  <simpsont@objectcomputing.com>
+        commit 28a2f18e3765617ab909e5f580504e3232fa685f
+
+        * .github/workflows/build_and_test.yml:
+
+          more fighting run-vcpkg
+
+Thu Jan 28 14:14:06 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit f416a5b5ac6453e9d07a1899a2fa753bd9ab2e98
+
+          Merge pull request #2357 from jrw972/observe-bits
+
+          Observer does not observe BITs
+
+Thu Jan 28 14:13:50 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit 564a50d5a47e6008bf92d8536e9c50d7d9702537
+
+          Merge pull request #2350 from mitza-oci/namespaces
+
+          opendds_idl: use a leading :: to qualify generated C++ scoped
+          names
+
+Thu Jan 28 03:14:52 UTC 2021  Timothy Simpson  <simpsont@objectcomputing.com>
+        commit f71c36c1865292ebbbf3590ba2ca2e9831cad8ad
+
+          Merge pull request #2298 from pollocktoci/bench2_output_parsing
+
+          Moved bench2 handle_report and associated functions to common
+          location.
+
+Thu Jan 28 00:15:06 UTC 2021  Fred Hornsey  <hornseyf@objectcomputing.com>
+        commit 691a378004bc783536ad1457c948e4b7fb6f41cb
+
+        * NEWS.md:
+        * PROBLEM-REPORT-FORM:
+        * VERSION.txt:
+        * dds/Version.h:
+
+          OpenDDS Post Release 3.16
+
+Thu Jan 28 00:06:05 UTC 2021  Fred Hornsey  <hornseyf@objectcomputing.com>
+        commit b82d1da1860c2e641e76e38ce00ea183e48ee833
+
+        * dds/DCPS/ConditionVariable.h:
+        * dds/DCPS/WriteDataContainer.cpp:
+
+          Fix Loop in WriteDataContainer::wait_pending
+
+Wed Jan 27 23:51:43 UTC 2021  Timothy Simpson  <simpsont@objectcomputing.com>
+        commit f3ee1184c8eebed640b05ea030e26d5794534495
+
+        * .github/workflows/build_and_test.yml:
+
+          vcpkg path issues
+
+Wed Jan 27 23:50:08 UTC 2021  Timothy Simpson  <simpsont@objectcomputing.com>
+        commit 688520001acfb68df43fbb951341452485d38e6b
+
+        * .github/workflows/build_and_test.yml:
+
+          Revert "vcpkg doesn't handle absolute paths very well (final tar
+          fails), just move it after vcpkg step"
+
+          This reverts commit 74c4bdf32768da83e48a903bc6bdec563dab0904.
+
+Wed Jan 27 23:36:02 UTC 2021  Timothy Simpson  <simpsont@objectcomputing.com>
+        commit 74c4bdf32768da83e48a903bc6bdec563dab0904
+
+        * .github/workflows/build_and_test.yml:
+
+          vcpkg doesn't handle absolute paths very well (final tar fails),
+          just move it after vcpkg step
+
+Wed Jan 27 21:51:28 UTC 2021  Tim Pollock  <pollockt@objectcomputing.com>
+        commit 1956f3de2c2e9a491b58680dd6158d3f47c65dc2
+
+        * performance-tests/bench/report_parser/argument_parser.cpp  performance-tests/bench/report_parser/ArgumentParser.cpp:
+        * performance-tests/bench/report_parser/argument_parser.h  performance-tests/bench/report_parser/ArgumentParser.h:
+        * performance-tests/bench/report_parser/time_series_gnuplot_formatter.cpp  performance-tests/bench/report_parser/TimeSeriesGnuPlotFormatter.cpp:
+        * performance-tests/bench/report_parser/time_series_gnuplot_formatter.h  performance-tests/bench/report_parser/TimeSeriesGnuPlotFormatter.h:
+        * performance-tests/bench/report_parser/time_series_raw_formatter.cpp  performance-tests/bench/report_parser/TimeSeriesRawFormatter.cpp:
+        * performance-tests/bench/report_parser/time_series_raw_formatter.h  performance-tests/bench/report_parser/TimeSeriesRawFormatter.h:
+        * performance-tests/bench/report_parser/main.cpp:
+
+          Renamed files to match class names. Other minor review-related
+          changes.
+
+Wed Jan 27 19:55:58 UTC 2021  Justin R. Wilson  <wilsonj@objectcomputing.com>
+        commit b6f59e8804f1d8f955239eedd4b7dc635bbc1f53
+
+        * dds/DCPS/JsonValueReader.h:
+        * tests/DCPS/UnitTests/JsonValueReader.cpp:
+
+          Fix build errors and warnings
+
+Wed Jan 27 19:46:12 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit 1e65e76da586308028a820d1ed45109b2d8d6260
+
+        * dds/idl/metaclass_generator.cpp:
+        * dds/idl/ts_generator.cpp:
+
+          fine-tuning opendds_idl's use of scoped names
+
+Wed Jan 27 19:23:49 UTC 2021  Justin R. Wilson  <wilsonj@objectcomputing.com>
+        commit 45d5054ae430318764a47cf013f3fc4c0f740295
+
+        * dds/DCPS/DataReaderImpl_T.h:
+
+          Observer does not observer BITs
+
+          Problem
+          -------
+
+          The observer does not observe samples stored in the BIT readers.
+
+          Solution
+          --------
+
+          Extend `store_synthetic_data` to call the observer.
+
+Wed Jan 27 19:05:04 UTC 2021  Timothy Simpson  <simpsont@objectcomputing.com>
+        commit fa68600af72ad9505ce0a01643ff1f66080e7150
+
+        * .github/workflows/build_and_test.yml:
+
+          Cleaning out files from vcpkg can break cacheing and is no longer
+          necessary
+
+Wed Jan 27 18:57:10 UTC 2021  Mike Kuznetsov  <kuznetsovm@objectcomputing.com>
+        commit e40cad90e3edabe7808d2259c6485a7521d6f7ff
+
+        * tests/DCPS/XTypes/Pub/XTypesPublisher.cpp:
+        * tests/DCPS/XTypes/Sub/XTypesSubscriber.cpp:
+        * tests/DCPS/XTypes/XTypes.h:
+        * tests/DCPS/XTypes/rtps_disc.ini:
+        * tests/DCPS/XTypes/rtps_disc_no_xtypes.ini:
+        * tests/DCPS/XTypes/rtps_disc_security.ini:
+        * tests/DCPS/XTypes/run_test.pl:
+
+          Added security option
+
+Wed Jan 27 18:02:00 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit f0a1b7001a829b42c72f083e4caebf45105929a7
+
+        * bin/dcps_tests.lst:
+
+          Exclude SkipSerialize from safety profile testing
+
+Wed Jan 27 17:49:39 UTC 2021  Tim Pollock  <pollockt@objectcomputing.com>
+        commit a9d22354f50816fd1065553d214a835aaf5d2e07
+
+        * performance-tests/bench/test_controller/main.cpp:
+
+          Fixed linter error - added newline.
+
+Wed Jan 27 17:16:53 UTC 2021  Tim Pollock  <pollockt@objectcomputing.com>
+        commit 229a981aa94d773e3db89c902ffbdc828fbddf4c
+
+          Merge branch 'master' into add_bench2_report_parser
+
+Wed Jan 27 16:26:05 UTC 2021  Tim Pollock  <pollockt@objectcomputing.com>
+        commit ab5c15237e6399ebc86e5ba098f8c0f5b71a6bc8
+
+          Merge branch 'master' into bench2_output_parsing
+
+Wed Jan 27 16:10:33 UTC 2021  Justin R. Wilson  <wilsonj@objectcomputing.com>
+        commit 4cb02754e3d3f34d7de3361a40c466e84bea9660
+
+        * dds/DCPS/JsonValueReader.h:
+
+          Fix build errors and warnings
+
+Wed Jan 27 16:01:28 UTC 2021  Justin R. Wilson  <wilsonj@objectcomputing.com>
+        commit c68dc749a701e0ac6c403658f8d998504dd9b0dc
+
+          Merge remote-tracking branch 'upstream/master' into value-reader
+
+Wed Jan 27 15:53:55 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit 12c69ad51e15a2c0ea7bd1a85db833c3930ee6bb
+
+        * dds/idl/marshal_generator.cpp:
+
+          fixed custom code generation for RTPS
+
+Wed Jan 27 12:29:43 UTC 2021  Tim Pollock  <pollockt@objectcomputing.com>
+        commit 62fa8f8fc25eab53a869f2df2a6d659629b18538
+
+        * performance-tests/bench_2/report_parser/argument_parser.cpp:
+        * performance-tests/bench_2/report_parser/time_series_gnuplot_formatter.cpp:
+
+          Got gnuplot output working correctly.
+
+Tue Jan 26 22:58:29 UTC 2021  Adam Mitz  <mitza@objectcomputing.com>
+        commit f3f4110f4304962bcb20a5118f8c9473e3dd5c52
+
+        * dds/idl/IDLTemplate.txt:
+        * dds/idl/dds_generator.cpp:
+        * dds/idl/dds_generator.h:
+        * dds/idl/field_info.cpp:
+        * dds/idl/langmap_generator.cpp:
+        * dds/idl/rapidjson_generator.cpp:
+        * dds/idl/ts_generator.cpp:
+        * tests/DCPS/Compiler/C++11/idl_test1_lib/.gitignore:
+        * tests/DCPS/Compiler/C++11/idl_test1_lib/cxx11_idl_test1_lib.mpc:
+        * tests/DCPS/Compiler/idl_test1_lib/.gitignore:
+        * tests/DCPS/Compiler/idl_test1_lib/Namespaces.idl:
+        * tests/DCPS/Compiler/idl_test1_lib/idl_test1_lib.mpc:
+        * tests/FACE/Compiler/idl_test1_lib/.gitignore:
+        * tests/FACE/Compiler/idl_test1_lib/FACE_idl_test1_lib.mpc:
+
+          opendds_idl: use a leading :: to qualify generated C++ scoped
+          names
+
+Tue Jan 26 22:49:07 UTC 2021  Justin R. Wilson  <wilsonj@objectcomputing.com>
+        commit ac3ca716a1e328ca5072ddc465adc622b4edf318
+
+        * dds/DCPS/JsonValueReader.h:
+        * tests/DCPS/UnitTests/JsonValueWriter.cpp:
+
+          Fix build errors, improve peek
+
+Tue Jan 26 17:29:39 UTC 2021  Tim Pollock  <pollockt@objectcomputing.com>
+        commit 2b55d59952c33832ba6b95bea7b3a80b9ba7bf9f
+
+        * performance-tests/bench_2/report_parser/argument_parser.cpp:
+        * performance-tests/bench_2/report_parser/argument_parser.h:
+        * performance-tests/bench_2/report_parser/main.cpp:
+        * performance-tests/bench_2/report_parser/time_series_gnuplot_formatter.cpp:
+        * performance-tests/bench_2/report_parser/time_series_gnuplot_formatter.h:
+        * performance-tests/bench_2/report_parser/time_series_raw_formatter.cpp:
+        * performance-tests/bench_2/report_parser/time_series_raw_formatter.h:
+
+          Changed file EOL settings to LF only.
+
+Tue Jan 26 13:47:48 UTC 2021  Tim Pollock  <pollockt@objectcomputing.com>
+        commit bb733d41156fa507fc8df438613a5b671121f816
+
+        * performance-tests/bench_2/report_parser/argument_parser.cpp:
+        * performance-tests/bench_2/report_parser/argument_parser.h:
+        * performance-tests/bench_2/report_parser/main.cpp:
+        * performance-tests/bench_2/report_parser/time_series_gnuplot_formatter.cpp:
+        * performance-tests/bench_2/report_parser/time_series_gnuplot_formatter.h:
+        * performance-tests/bench_2/report_parser/time_series_raw_formatter.cpp:
+        * performance-tests/bench_2/report_parser/time_series_raw_formatter.h:
+
+          Moved parsing code out of main into classes for each type.
+
+Mon Jan 25 21:10:47 UTC 2021  Justin R. Wilson  <wilsonj@objectcomputing.com>
+        commit db796f0faa64b8dba509a106361b0694711e0b19
+
+          Merge remote-tracking branch 'upstream/master' into value-reader
+
+Mon Jan 25 20:47:13 UTC 2021  Chip Jones  <jonesc@objectcomputing.com>
+        commit f3d3ae040e1f23abfd4a0ddc76a65a44960fc67f
+
+        * tests/DCPS/ParticipantLocationTopic/ParticipantLocationTest.cpp:
+        * tests/DCPS/ParticipantLocationTopic/rtps.ini:
+
+          Add subscriber transport config.
+
+Mon Jan 25 19:43:35 UTC 2021  Chip Jones  <jonesc@objectcomputing.com>
+        commit 1262184595fe549325822d5315e4dc7ecc37b31a
+
+        * tests/DCPS/ParticipantLocationTopic/governance.xml:
+        * tests/DCPS/ParticipantLocationTopic/governance_signed.p7s:
+        * tests/DCPS/ParticipantLocationTopic/permissions_1_signed.p7s:
+        * tests/DCPS/ParticipantLocationTopic/permissions_2_signed.p7s:
+        * tests/DCPS/ParticipantLocationTopic/permissions_2.xml  tests/DCPS/ParticipantLocationTopic/permissions_publisher.xml:
+        * tests/DCPS/ParticipantLocationTopic/permissions_publisher_signed.p7s:
+        * tests/DCPS/ParticipantLocationTopic/permissions_1.xml  tests/DCPS/ParticipantLocationTopic/permissions_relay.xml:
+        * tests/DCPS/ParticipantLocationTopic/permissions_relay_signed.p7s:
+        * tests/DCPS/ParticipantLocationTopic/permissions_subscriber.xml:
+        * tests/DCPS/ParticipantLocationTopic/permissions_subscriber_signed.p7s:
+        * tests/DCPS/ParticipantLocationTopic/relay.ini:
+        * tests/DCPS/ParticipantLocationTopic/rtps.ini:
+        * tests/DCPS/ParticipantLocationTopic/run_test.pl:
+
+          Update certificates and configuration files.
+
+Mon Jan 25 19:41:46 UTC 2021  Chip Jones  <jonesc@objectcomputing.com>
+        commit e9c22dfab7a78a34cc8f81b42460013733a64ec0
+
+        * tests/DCPS/ParticipantLocationTopic/ParticipantLocation.mpc:
+
+          Add ConsolidatedMessengerIdl dependency.
+
+Mon Jan 25 19:41:11 UTC 2021  Chip Jones  <jonesc@objectcomputing.com>
+        commit 5621cb5e2e9fe1322a843554398fbdcec3fc1734
+
+        * tests/DCPS/ParticipantLocationTopic/ParticipantLocationTest.cpp:
+
+          Add subscriber certs. Remove non-Rtps #includes.
+
+Mon Jan 25 13:37:50 UTC 2021  Tim Pollock  <pollockt@objectcomputing.com>
+        commit f22da4031f62855cd5fd6c1e99a3be1ac997884a
+
+          Merge branch 'master' into add_bench2_report_parser
+
+Mon Jan 25 13:35:50 UTC 2021  Tim Pollock  <pollockt@objectcomputing.com>
+        commit 56706573bb839a1fc87f91fe3b23dae0ebe4e3ed
+
+        * performance-tests/bench_2/common/util.cpp:
+
+          Corrected formatting.
+
+Mon Jan 25 13:02:56 UTC 2021  Tim Pollock  <pollockt@objectcomputing.com>
+        commit 28e0c5855406e0aa2261be4b07df90e4ae6905f1
+
+          Merge branch 'master' into bench2_output_parsing
+
+Fri Jan 22 19:40:25 UTC 2021  Tim Pollock  <pollockt@objectcomputing.com>
+        commit 28d1971c6fa942f72a1f9ce0886b3971288ce201
+
+        * performance-tests/bench_2/report_parser/main.cpp:
+
+          Modified to output in gnuplot format.
+
+Fri Jan 22 18:57:01 UTC 2021  Chip Jones  <jonesc@objectcomputing.com>
+        commit 9365d0b336fd063be89c2a56f37b015ecf25ff64
+
+        * tests/DCPS/ParticipantLocationTopic/ParticipantLocation.mpc:
+        * tests/DCPS/ParticipantLocationTopic/ParticipantLocationListenerImpl.cpp:
+        * tests/DCPS/ParticipantLocationTopic/ParticipantLocationTest.cpp:
+
+          Remove Messenger library dependency. Add "expected" output.
+
+Fri Jan 22 18:47:05 UTC 2021  Chip Jones  <jonesc@objectcomputing.com>
+        commit e76929b5c3f168a292b2a93e3d56017da69f10f1
+
+        * tests/DCPS/ParticipantLocationTopic/.gitignore:
+
+          Lint fix for .gitignore.
+
+Fri Jan 22 18:21:45 UTC 2021  Chip Jones  <jonesc@objectcomputing.com>
+        commit d29db0068b820f01227d4b1f07d6c2b5326679f9
+
+        * tests/DCPS/ParticipantLocationTopic/ParticipantLocationListenerImpl.cpp:
+        * tests/DCPS/ParticipantLocationTopic/ParticipantLocationListenerImpl.h:
+        * tests/DCPS/ParticipantLocationTopic/ParticipantLocationTest.cpp:
+
+          Use condition var instead of sleep. Remove unneeded code.
+
+Fri Jan 22 18:20:36 UTC 2021  Chip Jones  <jonesc@objectcomputing.com>
+        commit a6c321664d2d115c8b8189e27259deefca56da2e
+
+        * tests/DCPS/ParticipantLocationTopic/run_test.pl:
+
+          Change test timeout to 30 seconds.
+
+Fri Jan 22 18:19:41 UTC 2021  Justin R. Wilson  <wilsonj@objectcomputing.com>
+        commit 1bc0dbdb88ddd45438e5f6029babb3db99d0576f
+
+        * dds/DCPS/JsonValueWriter.h:
+        * tests/DCPS/UnitTests/JsonValueReader.cpp:
+
+          Fix build errors
+
+Fri Jan 22 18:16:41 UTC 2021  Chip Jones  <jonesc@objectcomputing.com>
+        commit b84d2d41daccb1adf275d78e429153dca504fa13
+
+        * tests/DCPS/ParticipantLocationTopic/.gitignore:
+
+          Update .gitignore
+
+Wed Jan 20 18:27:33 UTC 2021  Justin R. Wilson  <wilsonj@objectcomputing.com>
+        commit af9c96cdb0fa03db4d00691789550dc763cd7e6c
+
+        * MPC/config/dcps.mpb:
+        * MPC/config/optional_rapidjson.mpb:
+        * MPC/config/rapidjson.mpb:
+        * dds/DCPS/JsonValueReader.h:
+        * dds/DCPS/JsonValueWriter.cpp:
+        * dds/DCPS/JsonValueWriter.h:
+        * dds/DCPS/Observer.cpp:
+        * dds/DCPS/RapidJsonWrapper.h:
+        * dds/DCPS/ValueReader.h:
+        * dds/DCPS/ValueWriter.h:
+        * dds/DdsDcps.mpc:
+        * dds/idl/be_global.cpp:
+        * dds/idl/be_global.h:
+        * dds/idl/dds_generator.h:
+        * dds/idl/dds_visitor.cpp:
+        * dds/idl/marshal_generator.cpp:
+        * dds/idl/metaclass_generator.cpp:
+        * dds/idl/typeobject_generator.cpp:
+        * dds/idl/value_reader_generator.cpp:
+        * dds/idl/value_reader_generator.h:
+        * dds/idl/value_writer_generator.cpp:
+        * tests/DCPS/UnitTests/.gitignore:
+        * tests/DCPS/UnitTests/JsonValueReader.cpp:
+        * tests/DCPS/UnitTests/JsonValueWriter.cpp:
+        * tests/DCPS/UnitTests/UnitTests.mpc:
+        * tools/rapidjson:
+
+          Converting IDL data types to/from JSON requires special codegen
+
+          Problem
+          -------
+
+          The existing approach to converting an IDL datatype to/from JSON
+          is
+          based on code generated by the IDL compiler that is specific to
+          the
+          JSON conversion.
+
+          Solution
+          --------
+
+          Define the ValueReader interface and a JsonValueReader
+          implementation.
+          (ValueWriter and JsonValueWriter already existed.)  The
+          ValueReader/ValueWriter interfaces present a generic interface
+          for
+          deserializers/serializers. The IDL compiler has the responsiblity
+          of
+          define generic procedures that use these interfaces to populate a
+          value (vread) or recite a value (vwrite).
+
+          This change creates a number of short-term and long-term
+          opportunities:
+
+          1. The rapidjson pass can be removed from the IDL compiler.
+
+          2. The v8 pass can be removed by implementing ValueReader and
+          ValueWriter for the v8 environment. Presumably, these
+          implementations
+          would reside in node-opendds repository.
+
+          3. Support for CDR/XCDR (de)serialization can be converted to the
+          ValueReader/ValueWriter interfaces.
+
+          4. (3) supposes manual implemenations of vread and vwrite for
+          type
+          objects and type identifiers. These would correspond to the
+          existing
+          serializer support.
+
+          4. A C++ ValueWriter implementation can be defined and used to
+          generate C++ code that re-creates a value. This could be used to
+          great effect in the type object pass to generate the type object
+          and
+          type identifier output.
+
+          5. JsonValueWriter could be applied to type objects and type
+          identifiers to create an IDL to JSON pass to replace ITL. Json
+          schema
+          support may be interesting to consider as well.
+
+          Co-authored-by: Fred Hornsey <fred@hornsey.us>
+
+Thu Jan 21 22:28:03 UTC 2021  Chip Jones  <jonesc@objectcomputing.com>
+        commit 8c6adaa24b7567c0d0f9f3555db0c3637636ff2b
+
+        * tests/DCPS/ParticipantLocationTopic/ParticipantLocation.mpc:
+
+          Fix newline lint issue.
+
+Thu Jan 21 22:19:39 UTC 2021  Chip Jones  <jonesc@objectcomputing.com>
+        commit 143fc2c5cfc027d0128c81b242f40527530da330
+
+        * tests/DCPS/ParticipantLocationTopic/ParticipantLocationTest.cpp:
+
+          Change test wait time.
+
+Thu Jan 21 22:17:15 UTC 2021  Chip Jones  <jonesc@objectcomputing.com>
+        commit 5e6b6d25ffb7a9be07ebf5386ad805f7c2d086e1
+
+        * tests/DCPS/ParticipantLocationTopic/ParticipantLocationTest.cpp:
+        * tests/DCPS/ParticipantLocationTopic/rtps.ini:
+
+          Remove test code not related to location BIT.
+
+Thu Jan 21 22:13:07 UTC 2021  Chip Jones  <jonesc@objectcomputing.com>
+        commit b98ebe3b1690034907957e050907a5bcfb6b9c18
+
+        * tests/DCPS/ParticipantLocationTopic/ParticipantLocation.mpc:
+        * tests/DCPS/ParticipantLocationTopic/publisher.cpp  tests/DCPS/ParticipantLocationTopic/ParticipantLocationTest.cpp:
+        * tests/DCPS/ParticipantLocationTopic/rtps.ini:
+        * tests/DCPS/ParticipantLocationTopic/run_test.pl:
+
+          Rename test. Move participants to single process.
+
+Thu Jan 21 19:43:54 UTC 2021  Tim Pollock  <pollockt@objectcomputing.com>
+        commit 5e41caf44eb58a311d843be82bb797206ac6df4f
+
+        * performance-tests/bench_2/common/PropertyStatBlock.cpp:
+        * performance-tests/bench_2/common/PropertyStatBlock.h:
+        * performance-tests/bench_2/report_parser/main.cpp:
+
+          Added timestamp buffer to ConstPropertyStatBlock.
+
+          Also rearranged argument parsing code in main. Added code to main
+          to print out time series data.
+
+Wed Jan 20 23:50:46 UTC 2021  Tim Pollock  <pollockt@objectcomputing.com>
+        commit 439f7b3eb880e97f1ca5655fddea4f5494f790aa
+
+        * performance-tests/bench_2/common/util.cpp:
+        * performance-tests/bench_2/common/util.h:
+        * performance-tests/bench_2/test_controller/main.cpp:
+
+          Moved handle_report back into main.
+
+Wed Jan 20 13:32:29 UTC 2021  Tim Pollock  <pollockt@objectcomputing.com>
+        commit 0727b476cf21b180fca73672d96f4d1b7452e405
+
+        * performance-tests/bench_2/report_parser/main.cpp:
+
+          Moved argument parsing into it's own function to simplify code.
+
+Tue Jan 19 19:59:40 UTC 2021  Tim Pollock  <pollockt@objectcomputing.com>
+        commit 50c7ad43e3b376bb8a062c5c6d6a6b4e627f1b5a
+
+        * performance-tests/bench_2/report_parser/main.cpp:
+        * performance-tests/bench_2/report_parser/report_parser.mpc:
+
+          Initial checkin of bench2 report_parser application code.
+
+Tue Jan 19 17:56:44 UTC 2021  Chip Jones  <jonesc@objectcomputing.com>
+        commit 2c2daaef4852a0a133fab385f3eeed4d25b6d1e6
+
+        * tests/DCPS/DomainRange/DomainRangeTest.cpp:
+
+          Add missing ACE_DEBUG format specifier.
+
+Mon Jan 18 16:17:59 UTC 2021  Tim Pollock  <pollockt@objectcomputing.com>
+        commit c4827333fbb654ba0b946cd3975c2eaf31cd8572
+
+        * performance-tests/bench_2/common/util.cpp:
+        * performance-tests/bench_2/common/util.h:
+        * performance-tests/bench_2/run_test.pl:
+        * performance-tests/bench_2/test_controller/main.cpp:
+
+          Moved handle_report and associated functions to common location.
+
+Fri Jan 15 19:39:37 UTC 2021  Chip Jones  <jonesc@objectcomputing.com>
+
+        * tests/DCPS/ParticipantLocationTopic/governance.xml:
+        * tests/DCPS/ParticipantLocationTopic/governance_signed.p7s:
+        * tests/DCPS/ParticipantLocationTopic/permissions_1.xml:
+        * tests/DCPS/ParticipantLocationTopic/permissions_1_signed.p7s:
+        * tests/DCPS/ParticipantLocationTopic/permissions_2.xml:
+        * tests/DCPS/ParticipantLocationTopic/permissions_2_signed.p7s:
+        * tests/DCPS/ParticipantLocationTopic/publisher.cpp:
+        * tests/DCPS/ParticipantLocationTopic/relay.ini:
+        * tests/DCPS/ParticipantLocationTopic/relay_ipv6.ini:
+        * tests/DCPS/ParticipantLocationTopic/rtps.ini:
+        * tests/DCPS/ParticipantLocationTopic/rtps_ipv6.ini:
+        * tests/DCPS/ParticipantLocationTopic/rtps_no_ice.ini:
+        * tests/DCPS/ParticipantLocationTopic/rtps_no_ice_ipv6.ini:
+        * tests/DCPS/ParticipantLocationTopic/run_test.pl:
+        * tests/DCPS/ParticipantLocationTopic/subscriber.cpp:
+
+          Enable security for ParticipantLocationTopic test.
+
+Local Variables:
+mode: change-log
+add-log-time-format: (lambda () (progn (setq tz (getenv "TZ")) (set-time-zone-rule "UTC") (setq time (format-time-string "%a %b %e %H:%M:%S %Z %Y" (current-time))) (set-time-zone-rule tz) time))
+indent-tabs-mode: nil
+End:
